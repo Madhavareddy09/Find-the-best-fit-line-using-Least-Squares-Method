@@ -24,30 +24,29 @@ RegisterNumber:  212223240064
 
 import numpy as np
 import matplotlib.pyplot as plt
-X=np.array(eval(input()))
-Y=np.array(eval(input()))
+X=np.array(eval(input("Enter the input values of x in array:")))
+Y=np.array(eval(input("Enter the input values of y in array:")))
 X_mean=np.mean(X)
-print(X_mean)
 Y_mean=np.mean(Y)
-print(Y_mean)
 num=0
 denom=0
 for i in range(len(X)):
     num+=(X[i]-X_mean)*(Y[i]-Y_mean)
     denom+=(X[i]-X_mean)**2
 m=num/denom
-print(m)
+print("The slope of the predicted line is :",m)
 b=Y_mean - m*X_mean
-print(b)
+print("The y-intercept is :",b)
 Y_pred=m*X+b
-print(Y_pred)
+print("The predicted values of 'y' is :",Y_pred)
 plt.scatter(X,Y,color='green')
 plt.plot(X,Y_pred,color='red') 
 plt.show()
 ```
 
 ## Output:
-![image](https://github.com/Madhavareddy09/Find-the-best-fit-line-using-Least-Squares-Method/assets/145742470/3f1be62b-bcc0-4e19-b404-a47ee3b1df6a)
+![image](https://github.com/Madhavareddy09/Find-the-best-fit-line-using-Least-Squares-Method/assets/145742470/f9e7025f-f2e7-43c3-bbaa-eecbf866c11f)
+
 
 
 
